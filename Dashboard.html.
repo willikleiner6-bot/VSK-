@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+  {{ anzahl_laufend }} Laufende Veranstaltungen
+  {{ anzahl_offene_bewerbungen }} Offene Bewerbungen
+  {{ veranstaltungen|length }} Veranstaltungen gesamt
+
++ Neue Veranstaltung
+
+Name Datum Ort Kunde Status
+{% for v in veranstaltungen %}
+
+  {{ v["name"] }}
+  {{ v["datum"] }}
+  {{ v["ort"] }}
+  {{ v["kunde"] }}
+  {{ v["status"] }}
+
+{% endfor %}
+
+{% endblock %}
