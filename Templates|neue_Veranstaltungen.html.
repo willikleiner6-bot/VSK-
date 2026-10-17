@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Neue Veranstaltung</h2>
+<form method="POST">
+  <p>Name: <input name="name" required></p>
+  <p>Datum: <input type="date" name="datum"></p>
+  <p>Ort: <input name="ort"></p>
+  <p>Kunde: <input name="kunde"></p>
+  <p>Budget: <input name="budget" type="number"></p>
+  <p>Status:
+    <select name="status">
+      <option value="angefragt">angefragt</option>
+      <option value="bestaetigt">bestätigt</option>
+      <option value="in_vorbereitung">in Vorbereitung</option>
+      <option value="abgeschlossen">abgeschlossen</option>
+    </select>
+  </p>
+  <p>Notizen: <textarea name="notizen"></textarea></p>
+  <button class="btn" type="submit">Speichern</button>
+</form>
+{% endblock %}
