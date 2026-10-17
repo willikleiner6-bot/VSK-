@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Bewerbungen & Anfragen</h2>
+<table>
+<tr><th>Firma</th><th>Ansprechpartner</th><th>E-Mail</th><th>Status</th><th>Letzter Kontakt</th></tr>
+{% for v in veranstalter %}
+<tr>
+  <td>{{ v["firmenname"] }}</td>
+  <td>{{ v["ansprechpartner"] }}</td>
+  <td>{{ v["email"] }}</td>
+  <td>{{ v["status"] }}</td>
+  <td>{{ v["letzter_kontakt"] }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
